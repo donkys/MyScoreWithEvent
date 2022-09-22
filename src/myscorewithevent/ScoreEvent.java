@@ -15,15 +15,16 @@ public class ScoreEvent extends EventObject{
     
     private int uaeScore, thaiScore;
     
-    public ScoreEvent(Object o, int thai,int uae) {
+    public ScoreEvent(Object o, int thai, int uae) {
         super(o);
         thaiScore = thai;
         uaeScore = uae;
-        
     }
+    
     public int getThaiScore(){
         return thaiScore;
     }
+    
     public int getUAEScore(){
         return uaeScore;
     }

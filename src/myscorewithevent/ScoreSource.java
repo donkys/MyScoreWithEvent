@@ -12,12 +12,23 @@ import java.util.ArrayList;
  * @author prosf
  */
 public class ScoreSource {
+    private int thaiS, uaeS;
     private ArrayList<ScoreListener> listeners;
     public ScoreSource() {
 	listeners = new ArrayList<>();
     }
-    public void setSourceLine(int thai,int uae) {
-        fireScoreEvent(new ScoreEvent(this, thai, uae));
+    public void setSourceLine(int thai, int uae) {
+        thaiS = thai;
+        uaeS = uae;
+        fireScoreEvent(new ScoreEvent(this, thaiS, uaeS));
+    }
+
+    public int getThaiS() {
+        return thaiS;
+    }
+
+    public int getUaeS() {
+        return uaeS;
     }
 
     public void addScoreListener(ScoreListener l) {
